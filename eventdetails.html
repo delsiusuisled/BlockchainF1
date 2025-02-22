@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Paddock Club - Event Details</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="contracts.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@1.7.3/dist/web3.min.js"></script>
+    <script src="eventdetails.js" defer></script>
+    <style>
+        body {
+            background: url('paddockclub.jpg') no-repeat center center fixed; /* Replace with your image path */
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(0, 128, 128, 0.7); /* Dark teal with medium opacity */            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px; /* Vertical spacing below the title */
+        }
+
+        p {
+            margin: 10px 0; /* Add consistent vertical spacing for paragraphs */
+        }
+        #purchaseTicketButton {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #purchaseTicketButton:disabled {
+            background-color: #555555;
+            cursor: not-allowed;
+        }
+
+        #purchaseTicketButton:hover:not(:disabled) {
+            background-color: #cc0000;
+        }
+
+        .back-button {
+            color: #ff0000;
+            text-decoration: underline;
+            font-size: 16px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .back-button:visited {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .back-button:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="eventName"></h1>
+        <h1 id="eventName"></h1>
+        <p>Date: <span id="eventDate"></span></p>
+        <p>Location: <span id="eventLocation"></span></p>
+        <p>Available Tickets: <span id="availableTickets"></span></p>
+        <p>Price: <span id="eventPrice"></span> </p>
+
+
+        <button id="purchaseTicketButton" class="btn btn-primary">Purchase Ticket</button>
+        <br><br>
+        <a href="client.html" class="back-button">Back</a>
+    </div>
+</body>
+</html>

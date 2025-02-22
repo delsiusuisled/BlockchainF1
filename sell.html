@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Ticket - F1 Paddock Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@1.7.3/dist/web3.min.js"></script>
+    <script src="contracts.js"></script>
+    <script src="sell.js" defer></script>
+</head>
+<body class="bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="f1-logo.png" alt="F1 Logo" width="40" height="40" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="client.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mytickets.html">My Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="marketplace.html">Marketplace</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <h2 class="text-center">Sell Your Ticket</h2>
+        <div class="card mx-auto mt-3" style="max-width: 500px;">
+            <div class="card-body">
+                <h5 class="card-title">Ticket Details</h5>
+                <!-- Add proper labels and IDs -->
+<form id="sellTicketForm">
+    <div class="form-group">
+        <label>Ticket ID</label>
+        <input type="text" id="ticketID" readonly>
+    </div>
+    <div class="form-group">
+        <label>Event Name</label>
+        <input type="text" id="eventName" readonly>
+    </div>
+    <div class="form-group">
+        <label>Event Date</label>
+        <input type="text" id="eventDate" readonly>
+    </div>
+    <div class="form-group">
+        <label>Event Location</label>
+        <input type="text" id="eventLocation" readonly>
+    </div>
+    <div class="form-group">
+        <label>Current Price (ETH)</label>
+        <input type="number" id="currentPrice" readonly>
+    </div>
+    <div class="form-group">
+        <label>New Resale Price (ETH)</label>
+        <input type="number" id="newPriceETH" step="0.01" required>
+    </div>
+    <button type="submit" class="btn btn-primary">List for Resale</button>
+</form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2025 F1 Paddock Club. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
